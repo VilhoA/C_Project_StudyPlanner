@@ -1,0 +1,10 @@
+Day, Time, Course, Room
+Monday, 9:00, C programming, KNE555
+
+Tuesday, 13:00, Network
+Wednesday, 10:00, Academic writing, KMD777
+Monday, EIKYMPPI, Math, KME663
+Friday, 14:00, Routing, KMD666, LIIKAA_TIETOA
+Tuesday, 9:00, Java, KNE556
+ThisLineIsWayTooLongAndWillCauseBufferOverflowIfYouDoNotHandleItCorrectlyWhichIsWhyWeAreTestingItHereOhBoyThisIsALongLine, 12:00, Long Course, ROOM1
+Friday, 8:00, Online course, N/A
