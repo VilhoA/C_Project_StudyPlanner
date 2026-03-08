@@ -2,6 +2,7 @@
 #include <string.h>
 #include "utils.h"
 
+//Change \n to \0. If \n was not found then empty input buffer
 int remove_linefeed(char *string) {
     int length = strlen(string);
 
@@ -9,7 +10,6 @@ int remove_linefeed(char *string) {
         string[length - 1] = '\0';
     }
 
-    //if there's overflow this empties it
     else {
         int c;
         while ((c = getchar()) != '\n' && c != EOF);
