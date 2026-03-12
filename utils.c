@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <string.h>
+#include <ctype.h>
 #include "utils.h"
 #include "schedule.h"
 
@@ -32,6 +33,7 @@ int find_classes_by_day(ClassSession all_classes[], int total_count, const char 
     }
     return found_count;
 }
+
 // Sorts the given array to ascending by the hour
 void sort_classes_by_time(ClassSession classes[], int count) {
 
@@ -45,5 +47,18 @@ void sort_classes_by_time(ClassSession classes[], int count) {
                 classes[j + 1] = temp;
             }
         }
+    }
+}
+
+//Formats input to accept lower and upper case
+void format_input(char *str) {
+    //Makes whole string lower case
+    for (int i = 0; str[i] != '\0'; i++) {
+            str[i] = tolower(str[i]);
+    }
+
+    //Change first letter to uppercase if the string is not empty
+    if (strlen(str) > 0) {
+        str[0] = toupper(str[0]);
     }
 }
