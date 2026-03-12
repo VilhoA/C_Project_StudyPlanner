@@ -8,5 +8,4 @@ include_directories(.)
 add_executable(C_Project_StudyPlanner
         main.c
         schedule.c
-        ui.c
         utils.c)
