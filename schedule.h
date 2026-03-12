@@ -3,6 +3,8 @@
 
 // All necessary string lengths
 #define MAX_DAY_LEN 20
+#define MAX_USERI_LEN 20
+#define MAX_FILE_LEN 50
 #define MAX_TIME_LEN 10
 #define MAX_COURSE_LEN 50
 #define MAX_ROOM_LEN 20
@@ -19,6 +21,8 @@ typedef struct {
 
 // Maximum class amount
 #define MAX_CLASSES 100
+
+#define WEEKDAY_AMOUNT 7
 
 int read_schedule(const char *filename, ClassSession schedule[]);
 

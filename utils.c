@@ -68,7 +68,7 @@ void format_input(char *str) {
 bool is_weekday(const char *str) {
     const char *weekdays[] = {"Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"};
 
-    for (int i = 0; i < 7; i++) {
+    for (int i = 0; i < WEEKDAY_AMOUNT; i++) {
         if (strcmp(str, weekdays[i]) == 0) {
             return true;
         }
