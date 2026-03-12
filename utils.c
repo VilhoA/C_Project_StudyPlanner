@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <string.h>
 #include <ctype.h>
+#include <stdbool.h>
 #include "utils.h"
 #include "schedule.h"
 
@@ -61,4 +62,17 @@ void format_input(char *str) {
     if (strlen(str) > 0) {
         str[0] = toupper(str[0]);
     }
+}
+
+//Returns true if string is a weekday, otherwise false
+bool is_weekday(const char *str) {
+    const char *weekdays[] = {"Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"};
+
+    for (int i = 0; i < 7; i++) {
+        if (strcmp(str, weekdays[i]) == 0) {
+            return true;
+        }
+    }
+
+    return false;
 }
