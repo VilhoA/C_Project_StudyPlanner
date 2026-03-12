@@ -5,7 +5,7 @@
 
 int main(void) {
     ClassSession main_schedule[MAX_CLASSES];
-    char filename[MAX_FILE_LEN] = "schedule.csv";
+    char filename[MAX_FILE_LEN] = "schedule.csv"; //Change this if you want to change the file
     int class_count = 0;
     char userinput[MAX_USERI_LEN] = "";
 
@@ -24,8 +24,9 @@ int main(void) {
             format_input(userinput);
         }
 
+        //If user input not "stop" and actual input was given
         if (strcmp(userinput, "Stop") != 0 && strlen(userinput) > 0) {
-            if (is_weekday(userinput)) {
+            if (is_weekday(userinput)) {                                 //Checks if the input was a weekday
                 ClassSession day_classes[MAX_CLASSES];
                 int found_amount = find_classes_by_day(main_schedule, class_count, userinput, day_classes);
 
@@ -39,8 +40,8 @@ int main(void) {
                 }else {
                     printf("No classes today!\n");
                 }
-            }else {
-                printf("\n\n***Please enter a weekday or 'stop'***\n\n");
+            }else {                   //Input was not a weekday or "stop"
+                printf("\n*** Please enter a weekday like \"monday\" or \"stop\" to end program ***\n\n");
             }
         }
 
